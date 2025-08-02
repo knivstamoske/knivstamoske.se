@@ -5,6 +5,9 @@
 	import Upcoming from './(sections)/upcoming/Upcoming.svelte';
 	import Support from './(sections)/support/Support.svelte';
 	import Contact from './(sections)/contact/Contact.svelte';
+	import type { PageData } from './$types';
+
+	export let data: PageData;
 </script>
 
 <svelte:head>
@@ -21,7 +24,7 @@
 
 	<!-- Mobile only -->
 	<div class="container mx-auto flex flex-col gap-4 px-4 py-8 lg:hidden">
-		<Prayers />
+		<Prayers prayerTimesData={data.prayerTimes} />
 		<Services />
 		<Upcoming />
 		<Support />
@@ -36,7 +39,7 @@
 				<Upcoming />
 			</div>
 			<aside class="w-96 space-y-8">
-				<Prayers />
+				<Prayers prayerTimesData={data.prayerTimes} />
 				<Support />
 				<Contact />
 			</aside>

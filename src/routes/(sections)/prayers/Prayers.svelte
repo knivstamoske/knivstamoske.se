@@ -1,9 +1,17 @@
 <script lang="ts">
 	import { Sun, Sunset, Moon } from 'lucide-svelte';
-	import { getPrayerTimes } from '@thani-sh/prayer-time-se';
-	import { onMount } from 'svelte';
+	import type { ComponentType } from 'svelte';
 
-	let prayerTimes = [
+	export let prayerTimesData: any = null;
+
+	interface PrayerTime {
+		name: string;
+		adhan: string;
+		prayer: string;
+		icon: ComponentType;
+	}
+
+	let prayerTimes: PrayerTime[] = [
 		{ name: 'Fajr', adhan: '—:—', prayer: '—:—', icon: Moon },
 		{ name: 'Dhuhr', adhan: '—:—', prayer: '—:—', icon: Sun },
 		{ name: 'Asr', adhan: '—:—', prayer: '—:—', icon: Sun },
@@ -22,46 +30,41 @@
 		return formatTime(newHour, newMinute);
 	}
 
-	onMount(async () => {
-		try {
-			const times = await getPrayerTimes(new Date(), 'islamiskaforbundet', 'uppsala');
-
-			prayerTimes = [
-				{
-					name: 'Fajr',
-					adhan: formatTime(times.fajr.hour, times.fajr.minute),
-					prayer: addMinutes(times.fajr.hour, times.fajr.minute, 30),
-					icon: Moon
-				},
-				{
-					name: 'Dhuhr',
-					adhan: formatTime(times.dhuhr.hour, times.dhuhr.minute),
-					prayer: addMinutes(times.dhuhr.hour, times.dhuhr.minute, 10),
-					icon: Sun
-				},
-				{
-					name: 'Asr',
-					adhan: formatTime(times.asr.hour, times.asr.minute),
-					prayer: addMinutes(times.asr.hour, times.asr.minute, 10),
-					icon: Sun
-				},
-				{
-					name: 'Maghrib',
-					adhan: formatTime(times.maghrib.hour, times.maghrib.minute),
-					prayer: addMinutes(times.maghrib.hour, times.maghrib.minute, 10),
-					icon: Sunset
-				},
-				{
-					name: 'Isha',
-					adhan: formatTime(times.isha.hour, times.isha.minute),
-					prayer: addMinutes(times.isha.hour, times.isha.minute, 10),
-					icon: Moon
-				}
-			];
-		} catch (error) {
-			console.error('Failed to load prayer times:', error);
-		}
-	});
+	// Process prayer times data when component receives it
+	$: if (prayerTimesData) {
+		prayerTimes = [
+			{
+				name: 'Fajr',
+				adhan: formatTime(prayerTimesData.fajr.hour, prayerTimesData.fajr.minute),
+				prayer: addMinutes(prayerTimesData.fajr.hour, prayerTimesData.fajr.minute, 30),
+				icon: Moon
+			},
+			{
+				name: 'Dhuhr',
+				adhan: formatTime(prayerTimesData.dhuhr.hour, prayerTimesData.dhuhr.minute),
+				prayer: addMinutes(prayerTimesData.dhuhr.hour, prayerTimesData.dhuhr.minute, 10),
+				icon: Sun
+			},
+			{
+				name: 'Asr',
+				adhan: formatTime(prayerTimesData.asr.hour, prayerTimesData.asr.minute),
+				prayer: addMinutes(prayerTimesData.asr.hour, prayerTimesData.asr.minute, 10),
+				icon: Sun
+			},
+			{
+				name: 'Maghrib',
+				adhan: formatTime(prayerTimesData.maghrib.hour, prayerTimesData.maghrib.minute),
+				prayer: addMinutes(prayerTimesData.maghrib.hour, prayerTimesData.maghrib.minute, 10),
+				icon: Sunset
+			},
+			{
+				name: 'Isha',
+				adhan: formatTime(prayerTimesData.isha.hour, prayerTimesData.isha.minute),
+				prayer: addMinutes(prayerTimesData.isha.hour, prayerTimesData.isha.minute, 10),
+				icon: Moon
+			}
+		];
+	}
 </script>
 
 <section id="prayer-times" class="rounded-2xl bg-white py-8">
