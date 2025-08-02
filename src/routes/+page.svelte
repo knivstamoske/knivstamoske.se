@@ -22,12 +22,12 @@
 
 	<!-- Mobile only -->
 	<div class="container mx-auto flex flex-col gap-4 px-4 py-8 lg:hidden">
+		<Support />
 		{#await getPrayerTimes() then prayerTimes}
 			<Prayers prayerTimesData={prayerTimes} />
 		{/await}
 		<Services />
 		<Upcoming />
-		<Support />
 		<Contact />
 	</div>
 
@@ -39,10 +39,10 @@
 				<Upcoming />
 			</div>
 			<aside class="w-96 space-y-8">
+				<Support />
 				{#await getPrayerTimes() then prayerTimes}
 					<Prayers prayerTimesData={prayerTimes} />
 				{/await}
-				<Support />
 				<Contact />
 			</aside>
 		</div>
