@@ -2,13 +2,14 @@
 	import { Sparkles } from 'lucide-svelte';
 	import { getPrayerTimes } from '@thani-sh/prayer-time-se';
 	import Prayers from './Prayers.svelte';
+	import placeholderImage from './assets/placeholder.jpg';
 </script>
 
 <section class="relative flex min-h-[80vh] items-center overflow-hidden py-24 lg:hidden">
 	<!-- Background Image -->
 	<div class="absolute inset-0">
 		<img
-			src="/placeholder.svg?height=800&width=1200"
+			src={placeholderImage}
 			alt="Islamiska Kulturcenter Knivsta interior"
 			class="h-full w-full object-cover"
 		/>
@@ -38,7 +39,7 @@
 	<!-- Background Image -->
 	<div class="absolute inset-0">
 		<img
-			src="/placeholder.svg?height=800&width=1200"
+			src={placeholderImage}
 			alt="Islamiska Kulturcenter Knivsta interior"
 			class="h-full w-full object-cover"
 		/>

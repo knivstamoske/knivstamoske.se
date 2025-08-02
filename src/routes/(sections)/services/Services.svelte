@@ -1,22 +1,26 @@
 <script lang="ts">
+	import servicePrayers from './assets/service-prayers.png';
+	import serviceQuranClass from './assets/service-quran-class.png';
+	import serviceSocializing from './assets/service-socializing.png';
+
 	const services = [
 		{
 			title: 'Dagliga böner',
 			description: 'Alla fem dagliga böner hålls i moskén enligt islamisk religion.',
 			gradient: 'from-blue-500 to-cyan-500',
-			image: '/placeholder.svg?height=200&width=300'
+			image: servicePrayers
 		},
 		{
 			title: 'Koranlektioner',
 			description: 'Koranundervisning för barn på ett roligt och engagerande sätt.',
 			gradient: 'from-orange-500 to-red-500',
-			image: '/placeholder.svg?height=200&width=300'
+			image: serviceQuranClass
 		},
 		{
 			title: 'Sammankomster',
 			description: 'Gemenskapsaktiviteter och sociala evenemang för hela familjen.',
 			gradient: 'from-pink-500 to-rose-500',
-			image: '/placeholder.svg?height=200&width=300'
+			image: serviceSocializing
 		}
 	];
 </script>

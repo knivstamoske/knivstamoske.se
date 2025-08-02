@@ -1,11 +1,13 @@
 <script lang="ts">
 	import { Calendar, Clock } from 'lucide-svelte';
+	import serviceFridays from './assets/service-fridays.png';
+	import serviceQuranClass from './assets/service-quran-class.png';
 
 	const events = [
 		{
 			title: 'Fredagsbön med khutbah',
 			description: 'Veckans fredagsbön med khutbah på svenska och arabiska.',
-			image: '/placeholder.svg?height=200&width=300',
+			image: serviceFridays,
 			gradient: 'from-emerald-500 to-teal-500',
 			date: 'Varje fredag',
 			time: '13:00',
@@ -14,7 +16,7 @@
 		{
 			title: 'Koranklass för barn',
 			description: 'Koranlektioner och islamisk utbildning för barn 6-14 år.',
-			image: '/placeholder.svg?height=200&width=300',
+			image: serviceQuranClass,
 			gradient: 'from-amber-500 to-orange-500',
 			date: 'Söndagar',
 			time: '14:00',
