@@ -1,4 +1,12 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
-@plugin "daisyui";
+
+@plugin "daisyui" {
+	themes: dark --default;
+}
+
+body {
+	background-color: #1d232a;
+	background-image: url('/mirrored-squares.png');
+}
