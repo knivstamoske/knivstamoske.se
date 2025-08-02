@@ -42,7 +42,7 @@
 	},
 	"dependencies": {
 		"@inlang/paraglide-js": "^2.0.0",
-		"@thani-sh/prayer-time-se": "^4.2.1",
+		"@thani-sh/prayer-time-se": "^4.2.3",
 		"date-fns": "^4.1.0",
 		"lodash": "^4.17.21",
 		"lucide-svelte": "^0.536.0"
