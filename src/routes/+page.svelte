@@ -40,9 +40,6 @@
 			</div>
 			<aside class="w-96 space-y-8">
 				<Support />
-				{#await getPrayerTimes() then prayerTimes}
-					<Prayers prayerTimesData={prayerTimes} />
-				{/await}
 				<Contact />
 			</aside>
 		</div>
