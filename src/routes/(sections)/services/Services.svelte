@@ -1,23 +1,18 @@
 <script lang="ts">
-	import { Heart, GraduationCap, Users } from 'lucide-svelte';
-
 	const services = [
 		{
-			icon: Users,
 			title: 'Dagliga böner',
 			description: 'Alla fem dagliga böner hålls i moskén enligt islamisk religion.',
 			gradient: 'from-blue-500 to-cyan-500',
 			image: '/placeholder.svg?height=200&width=300'
 		},
 		{
-			icon: GraduationCap,
 			title: 'Koranlektioner',
 			description: 'Koranundervisning för barn på ett roligt och engagerande sätt.',
 			gradient: 'from-orange-500 to-red-500',
 			image: '/placeholder.svg?height=200&width=300'
 		},
 		{
-			icon: Heart,
 			title: 'Sammankomster',
 			description: 'Gemenskapsaktiviteter och sociala evenemang för hela familjen.',
 			gradient: 'from-pink-500 to-rose-500',
@@ -51,11 +46,6 @@
 							class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
 						/>
 						<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-						<div
-							class="absolute top-4 left-4 rounded-2xl bg-gradient-to-br p-3 {service.gradient} text-white shadow-lg"
-						>
-							<svelte:component this={service.icon} class="h-8 w-8" />
-						</div>
 					</figure>
 					<div class="card-body">
 						<h2
