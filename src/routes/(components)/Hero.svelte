@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Sparkles } from 'lucide-svelte';
 	import { getPrayerTimes } from '@thani-sh/prayer-time-se';
-	import Prayers from '../(sections)/prayers/Prayers.svelte';
+	import Prayers from './Prayers.svelte';
 </script>
 
 <section class="relative flex min-h-[80vh] items-center overflow-hidden py-24 lg:hidden">

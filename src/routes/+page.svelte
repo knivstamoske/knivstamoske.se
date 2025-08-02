@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { getPrayerTimes } from '@thani-sh/prayer-time-se';
 	import Hero from './(components)/Hero.svelte';
-	import Prayers from './(sections)/prayers/Prayers.svelte';
+	import Prayers from './(components)/Prayers.svelte';
 	import Services from './(sections)/services/Services.svelte';
 	import Upcoming from './(sections)/upcoming/Upcoming.svelte';
 	import Support from './(sections)/support/Support.svelte';
