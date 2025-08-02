@@ -43,7 +43,12 @@
 					<span class="text-sm font-semibold text-gray-900">Telefon</span>
 				</div>
 				<div class="text-right">
-					<div class="text-sm font-bold text-emerald-600">018-123 45 67</div>
+					<a
+						href="tel:018-123 45 67"
+						class="text-sm font-bold text-emerald-600 transition-colors hover:text-emerald-700 hover:underline"
+					>
+						018-123 45 67
+					</a>
 				</div>
 			</div>
 
@@ -57,7 +62,12 @@
 					<span class="text-sm font-semibold text-gray-900">E-post</span>
 				</div>
 				<div class="text-right">
-					<div class="text-sm font-bold text-emerald-600">info@knivstamoske.se</div>
+					<a
+						href="mailto:info@knivstamoske.se"
+						class="text-sm font-bold text-emerald-600 transition-colors hover:text-emerald-700 hover:underline"
+					>
+						info@knivstamoske.se
+					</a>
 				</div>
 			</div>
 
