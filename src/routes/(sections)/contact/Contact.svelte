@@ -57,7 +57,7 @@
 					<span class="text-sm font-semibold text-gray-900">E-post</span>
 				</div>
 				<div class="text-right">
-					<div class="text-sm font-bold text-emerald-600">info@ikknivsta.se</div>
+					<div class="text-sm font-bold text-emerald-600">info@knivstamoske.se</div>
 				</div>
 			</div>
 
