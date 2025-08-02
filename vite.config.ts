@@ -9,7 +9,8 @@ export default defineConfig({
 		sveltekit(),
 		paraglideVitePlugin({
 			project: './i18n/project.inlang',
-			outdir: './src/lib/i18n'
+			outdir: './src/lib/i18n',
+			disableAsyncLocalStorage: true
 		})
 	]
 });
